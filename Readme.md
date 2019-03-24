@@ -10,5 +10,27 @@ BPSK is basically a Double Side Band Suppressed Carrier (DSBSC) modulation schem
 We know that BPSK signal carries the information about two symbols. These symbols are symbol ‘1’ and symbol ‘0’. We can represent BPSK signal geometrically to show these two symbols. We know that BPSK signal is expressed as,s(t)=b(t)v2Pcos(2pfct)
 on rearranging the equation, s(t)=b(t)vPTb.(v2/Tb) cos(2pfct)
 now, let ?1(t)= (v2/Tb) cos(2pfct) represents an orthonormal carrier signal.
-let Now Eb=PTb Therefore, s(t)= ±vEb?1(t) 
+let Now Eb=PTb Therefore, s(t)= ±vEb?1(t), and assume Eb=1.
 ![BPSK](BPSK/Before_Channel_Signal.png)
+
+### Steps of simulation
+1. #### Open Model
+	![open model](BPSK/model_main.png)
+1. #### Change Channel EbNo
+	Change channel EbNo(noise ratio ) to variable produced by BerTool.
+    ![open model](BPSK/change_channel_ebno.png)
+1. #### Open BerTool
+	![open model](BPSK/bertool.png)
+1. #### change the value of Eb/No 
+	Change the value to be Eb/No to take values from -10:10 db.
+    ![open model](BPSK/bertool_set_ebno.png)
+1. #### Choose the file specified 
+	Change the file of the design and set error variable to the output of Bet erroro Rate component in 
+    the model File ( in my model the variable name is ErrorVec)
+    ![open model](BPSK/ber_model_load.png)
+1. #### Run to get the graphs.
+1. #### Note 
+	it is better to increase the simulation time more than (default value 10).
+    ![open model](BPSK/simulation_time.png)
+	
+
