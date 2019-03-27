@@ -13,7 +13,7 @@ now, let ?1(t)= (v2/Tb) cos(2pfct) represents an orthonormal carrier signal.
 let Now Eb=PTb Therefore, s(t)= ±vEb?1(t), and assume Eb=1.
 ![BPSK](BPSK/Before_Channel_Signal.png)
 
-### Steps of simulation
+### Steps of simulation ( reproduce the figures )
 1. #### Open Model
 	![open model](BPSK/model_main.png)
 1. #### Change Channel EbNo
