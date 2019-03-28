@@ -129,11 +129,13 @@ we will do the simulation steps on BPSK (the steps are the same for all types of
 	![open model](BPSK/bertool.png)
 1. #### change the value of Eb/No 
 	Change the value to be Eb/No to take values from -10:50 db. (to see the curve in ber figure)
-    ![open model](BPSK/bertool_set_ebno.png)
+    ![step1 figure](BPSK/Bonus/step67.png)
+
 1. #### Choose the file specified 
 	choose the file of the design and set error variable to the output of Bet error Rate component in 
     the model File ( in my model the variable name is ErrorVec)
-    ![open model](BPSK/ber_model_load.png)
+   	![step1 figure](BPSK/Bonus/step67.png)
+
 1. #### Run to get the graphs.
 1. #### Note 
 	it is better to increase the simulation time more than (default value 10). (if the simulation stopped before completion it's job)
