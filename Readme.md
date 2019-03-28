@@ -32,6 +32,17 @@ let Now Eb=PTb Therefore, s(t)= ±vEb?1(t), and assume Eb=1.
 1. #### Note 
 	it is better to increase the simulation time more than (default value 10).
     ![open model](BPSK/simulation_time.png)
+    
+    
+    ![open model](BPSK/ber_figure.png)
+    
+    ![open model](BPSK/After_Channel_Signal.png)
+    
+    ![open model](BPSK/Before_Channel_Signal.png)
+
+    
+
+    
 
 ## FSK (  Frequency shift keying)
 As its name suggests, a frequency shift keyed transmitter has its frequency shifted by
@@ -143,5 +154,24 @@ we will do the simulation steps on BPSK (the steps are the same for all types of
   
 consealltelation diagram is the same as before ( without raised cosine ) but ber figure is different
 
+  Bpsk
+  
    ![ber of BPSK with Root raised cosine ](BPSK/Bonus/ber.png)
+   
+  FSK
+   ![ber of FSK with Root raised cosine ](FSK/Bonus/ber.png)
+   
+  QAM16
+   
+   ![ber of Qam16 with Root raised cosine ](QAM16/Bonus/ber.png)
+   
+  QAM64
+   ![ber of Qam64 with Root raised cosine ](QAM64/Bonus/ber.png)
+   
+  QPSK
+   ![ber of Qpsk with Root raised cosine ](QPSK/Bonus/ber.png)
+
+
+
+
 
