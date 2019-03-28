@@ -94,3 +94,52 @@ In 64-QAM, each symbol is represented by 6 bits and in 256-QAM, each symbol is r
 
 
 *** to get the figures do the same steps of simulation in BPSK ***
+
+## Modulation With Raised Cosine Pulse Shaping 
+Raised-cosine pulse shaping filter is generally employed at transmitter 
+
+The square-root raised cosine pulse shape p(t) and it’s Fourier transform P (f ) are given by
+
+![ber figure](BPSK/Bonus/equation1.png)
+
+### Why to use 
+pulse shaping in general is used to face the limited bandwidth of the channel and to face ISI 
+(intersymbol interference), but it reduces the immunity to noise.
+
+### Simulation Steps 
+
+we will do the simulation steps on BPSK (the steps are the same for all types of modulation)
+
+1. #### first opne AWGN channel 
+	but the value of Eb/No to something high to for example 50 .
+    ![step1 figure](BPSK/Bonus/step1.png)
+1. #### simulate and calculate the delay
+	in matlab raised cosine filter have a delay so we want to calulate this is done by doing step 1 and 
+    run and see the value of the delay
+	![step1 figure](BPSK/Bonus/step2.png)
+1. #### open error bit caluclation component and update the value of recaived delay
+	
+	![step1 figure](BPSK/Bonus/step3.png)
+    
+1. #### return the value of EbNo to the default variable.
+	
+	![step1 figure](BPSK/Bonus/step4.png)
+    
+1. #### Open BerTool
+	![open model](BPSK/bertool.png)
+1. #### change the value of Eb/No 
+	Change the value to be Eb/No to take values from -10:50 db. (to see the curve in ber figure)
+    ![open model](BPSK/bertool_set_ebno.png)
+1. #### Choose the file specified 
+	choose the file of the design and set error variable to the output of Bet error Rate component in 
+    the model File ( in my model the variable name is ErrorVec)
+    ![open model](BPSK/ber_model_load.png)
+1. #### Run to get the graphs.
+1. #### Note 
+	it is better to increase the simulation time more than (default value 10). (if the simulation stopped before completion it's job)
+    ![open model](BPSK/simulation_time.png)
+  
+consealltelation diagram is the same as before ( without raised cosine ) but ber figure is different
+
+   ![ber of BPSK with Root raised cosine ](BPSK/Bonus/ber.png)
+
